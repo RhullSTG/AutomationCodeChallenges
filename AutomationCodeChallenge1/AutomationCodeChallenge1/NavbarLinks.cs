@@ -11,11 +11,10 @@ namespace AutomationCodeChallenge1
 {
    public class NavbarLinks
    {
-
-        public void GetNavBarOption(IWebElement[] anyNavButton)
+        IWebDriver driver = new ChromeDriver();
+        public void GetNavBarOption(string[] anyNavButton)
         {
            
-            
         }
     }
 }
