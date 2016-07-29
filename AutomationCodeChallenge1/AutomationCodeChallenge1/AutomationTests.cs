@@ -40,13 +40,14 @@ namespace AutomationCodeChallenge1
         [TestMethod]
         public void TestForNavigation()
         {
-            string url = "https://www.skiutah.com";
-            string validationString = "Ski Utah";
-
-            driver.Navigate().GoToUrl(url);
-
-            GetNavBarOption();
             
+            NavBarNavigation("Plan Your Trip");
+            NavBarNavigation("Resorts & Snow");
+            NavBarNavigation("Stories");
+            NavBarNavigation("Deals");
+            NavBarNavigation("Passes");
+            NavBarNavigation("Explore");
+
         }
 
         /*
@@ -55,6 +56,7 @@ namespace AutomationCodeChallenge1
         [TestMethod]
         public void TestForSubMenuNavigation()
         {
+            NavBarSubMenuNavigation();
             
         }
 
