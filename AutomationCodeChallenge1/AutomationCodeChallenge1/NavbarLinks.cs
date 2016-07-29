@@ -74,22 +74,273 @@ namespace AutomationCodeChallenge1
             }
         }
 
-       public void NavBarSubMenuNavigation()
+       public void PlanYourTripSubMenu(string subNavBarBtn)
        {
 
-           driver.Navigate().GoToUrl("https://www.skiutah.com");
-           driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("https://www.skiutah.com");
+            driver.Manage().Window.Maximize();
 
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
 
-            var planYourTripBtn = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li/a")));
+            var planYourTripBtn =
+               wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li/a")));
             Actions action = new Actions(driver);
             action.MoveToElement(planYourTripBtn).Perform();
 
-            
-            driver.FindElement(By.XPath("//div[@id=\'top_menu\']/ul/li/ul/li/ul/li[2]/a")).Click(); //Goes to activities and verifies that it is the activities page
+
+            if (subNavBarBtn == "Action")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Activities\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Food + Drink")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Food + Drink\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Lodging")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Lodging\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Retail + Rental")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Retail + Rental\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Reservation Experts")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Reservation Experts\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski Resorts")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Ski Resorts\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski School")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Ski School\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Transportation")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Transportation\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Utah Events")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Utah Events\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Photos")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Photos\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Videos")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Videos\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Stories")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Stories\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Compare Resorts")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Compare Resorts\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
         }
 
-    }
+       public void ResortsAndSnowSubMenu(string subNavBarBtn)
+       {
+            driver.Navigate().GoToUrl("https://www.skiutah.com");
+            driver.Manage().Window.Maximize();
+
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+
+            var resortsAndSnowBtn =
+               wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[2]/a")));
+            Actions action = new Actions(driver);
+            action.MoveToElement(resortsAndSnowBtn).Perform();
+
+
+            if (subNavBarBtn == "Resort Comparison")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Resort Comparison\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Alta")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Alta\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Beaver Mountain")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Beaver Mountain\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Brian Head")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Brian Head\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Brighton")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Brighton\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Deer Valley")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Deer Valley\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Eagle Point")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Eagle Point\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Nordic Valley")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Nordic Valley\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Park City")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Park City\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Powder Mountain")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Powder Mountain\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Snowbasin")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Snowbasin\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Snowbird")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Snowbird\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Solitude")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Solitude\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Sundance")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Sundance\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Cross Country")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Cross Country - Nordic Locations\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Snow Report")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Snow Report\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Mobile App & TV Display")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Mobile App & TV Display\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Live Mountain Cams")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Live Mountain Cams\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Printable Snow Report")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Printable Snow Report\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Why Utah Snow?")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Why Utah Snow?\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "All Trail Maps")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'All Trail Maps\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+        }
+    
+   }
 
 }

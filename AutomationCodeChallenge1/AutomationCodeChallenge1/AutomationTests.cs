@@ -56,8 +56,39 @@ namespace AutomationCodeChallenge1
         [TestMethod]
         public void TestForSubMenuNavigation()
         {
-            NavBarSubMenuNavigation();
-            
+            PlanYourTripSubMenu("Action");
+            PlanYourTripSubMenu("Food + Drink");
+            PlanYourTripSubMenu("Lodging");
+            PlanYourTripSubMenu("Retail + Rental");
+            PlanYourTripSubMenu("Reservations");
+            PlanYourTripSubMenu("Ski Resorts");
+            PlanYourTripSubMenu("Ski School");
+            PlanYourTripSubMenu("Transportation");
+            PlanYourTripSubMenu("Utah Events");
+            PlanYourTripSubMenu("Photos");
+            PlanYourTripSubMenu("Videos");
+            PlanYourTripSubMenu("Stories");
+            PlanYourTripSubMenu("Compare Resorts");
+
+            ResortsAndSnowSubMenu("Resort Comparison");
+            ResortsAndSnowSubMenu("Alta");
+            ResortsAndSnowSubMenu("Beaver Mountain");
+            ResortsAndSnowSubMenu("Brian Head");
+            ResortsAndSnowSubMenu("Brighton");
+            ResortsAndSnowSubMenu("Cherry Peak");
+            ResortsAndSnowSubMenu("Deer Valley");
+            ResortsAndSnowSubMenu("Eagle Point");
+            ResortsAndSnowSubMenu("Nordic Valley");
+            ResortsAndSnowSubMenu("Park City");
+            ResortsAndSnowSubMenu("Powder Mountain");
+            ResortsAndSnowSubMenu("Snowbasin");
+            ResortsAndSnowSubMenu("Snowbird");
+            ResortsAndSnowSubMenu("Solitude");
+            ResortsAndSnowSubMenu("Sundance");
+            ResortsAndSnowSubMenu("Sundance");
+            ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
+
+
         }
 
         /*
