@@ -88,6 +88,13 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
 
+            DealsSubMenu("All Deals");
+            DealsSubMenu("Lodging");
+            DealsSubMenu("Retail & Rental");
+            DealsSubMenu("Transportation");
+            DealsSubMenu("Learn to Ski Program");
+            DealsSubMenu("Beginner");
+
 
         }
 
