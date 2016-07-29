@@ -87,8 +87,14 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
+            ResortsAndSnowSubMenu("Snow Report");
+            ResortsAndSnowSubMenu("Mobile App & TV Display");
+            ResortsAndSnowSubMenu("Live Mountain Cams");
+            ResortsAndSnowSubMenu("Printable Snow Reports");
+            ResortsAndSnowSubMenu("Why Utah Snow?");
+            ResortsAndSnowSubMenu("All Trail Maps");
 
-
+            DealsSubMenu("");
         }
 
         /*

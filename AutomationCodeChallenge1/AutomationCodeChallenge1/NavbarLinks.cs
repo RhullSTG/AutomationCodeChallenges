@@ -340,6 +340,19 @@ namespace AutomationCodeChallenge1
             }
 
         }
+
+       public void DealsSubMenu(string subNavBarBtn)
+       {
+            driver.Navigate().GoToUrl("https://www.skiutah.com");
+            driver.Manage().Window.Maximize();
+
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+
+            var planYourTripBtn =
+               wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li/a")));
+            Actions action = new Actions(driver);
+            action.MoveToElement(planYourTripBtn).Perform();
+        }
     
    }
 
