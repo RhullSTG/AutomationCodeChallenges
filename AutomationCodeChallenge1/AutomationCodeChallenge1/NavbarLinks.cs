@@ -352,6 +352,48 @@ namespace AutomationCodeChallenge1
                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li/a")));
             Actions action = new Actions(driver);
             action.MoveToElement(planYourTripBtn).Perform();
+
+            if (subNavBarBtn == "All Deals")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'All Deals\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Lodging")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Lodging\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Retail & Rental")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Retail & Rental\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Transportation")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Transportation\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Learn to Ski Program")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Learn to Ski Program\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Beginner")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Beginner\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
         }
     
    }
