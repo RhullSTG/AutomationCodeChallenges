@@ -11,11 +11,11 @@ namespace AutomationCodeChallenge1
     {
         public static IWebDriver driver; 
 
-        [AssemblyInitialize]
-        public static void SetUp(TestContext context)
-        {
-            driver = new ChromeDriver();
-        }
+        //[AssemblyInitialize]
+        //public static void SetUp(TestContext context)
+        //{
+        //    driver = new ChromeDriver();
+        //}
 
         /*
          * AUTOMATION CODE CHALLENGE #1
@@ -87,15 +87,25 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
+            ResortsAndSnowSubMenu("Snow Report");
+            ResortsAndSnowSubMenu("Mobile App & TV Display");
+            ResortsAndSnowSubMenu("Live Mountain Cams");
+            ResortsAndSnowSubMenu("Printable Snow Reports");
+            ResortsAndSnowSubMenu("Why Utah Snow?");
+            ResortsAndSnowSubMenu("All Trail Maps");
 
+            
+        }
+
+        [TestMethod]
+        public void TestForDealsSubMenuNavigation()
+        {
             DealsSubMenu("All Deals");
             DealsSubMenu("Lodging");
             DealsSubMenu("Retail & Rental");
             DealsSubMenu("Transportation");
             DealsSubMenu("Learn to Ski Program");
             DealsSubMenu("Beginner");
-
-
         }
 
         /*
