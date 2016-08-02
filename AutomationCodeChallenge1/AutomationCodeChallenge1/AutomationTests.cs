@@ -11,11 +11,11 @@ namespace AutomationCodeChallenge1
     {
         public static IWebDriver driver; 
 
-        [AssemblyInitialize]
-        public static void SetUp(TestContext context)
-        {
-            driver = new ChromeDriver();
-        }
+        //[AssemblyInitialize]
+        //public static void SetUp(TestContext context)
+        //{
+        //    driver = new ChromeDriver();
+        //}
 
         /*
          * AUTOMATION CODE CHALLENGE #1
@@ -94,7 +94,18 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Why Utah Snow?");
             ResortsAndSnowSubMenu("All Trail Maps");
 
-            DealsSubMenu("");
+            
+        }
+
+        [TestMethod]
+        public void TestForDealsSubMenuNavigation()
+        {
+            DealsSubMenu("All Deals");
+            DealsSubMenu("Lodging");
+            DealsSubMenu("Retail & Rental");
+            DealsSubMenu("Transportation");
+            DealsSubMenu("Learn to Ski Program");
+            DealsSubMenu("Beginner");
         }
 
         /*
