@@ -53,6 +53,7 @@ namespace AutomationCodeChallenge1
         /*
          * AUTOMATION CODE CHALLENGE #3
          */
+
         [TestMethod]
         public void TestForSubMenuNavigation()
         {
@@ -88,16 +89,38 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
 
-
-        [TestMethod]
-        public void TestForDealsSubMenuNavigation()
-        {
             DealsSubMenu("All Deals");
             DealsSubMenu("Lodging");
             DealsSubMenu("Retail & Rental");
             DealsSubMenu("Transportation");
             DealsSubMenu("Learn to Ski Program");
             DealsSubMenu("Beginner");
+
+            PassesSubMenu("Purchase Utah Lift Tickets");
+            PassesSubMenu("5th & 6th Grade Passport");
+            PassesSubMenu("Ski Utah Yeti Pass");
+            PassesSubMenu("Buy The Silver and Gold Passes");
+            PassesSubMenu("2016-17 Season Passes");
+            PassesSubMenu("Military and Senior Day Ski Pass Prices");
+
+            ExploreSubMenu("Stories - Photos - Vidoes");
+            ExploreSubMenu("Interconnect Adventure Tour");
+            ExploreSubMenu("Utah Areas 101");
+            ExploreSubMenu("Getting To Utah Resorts");
+            ExploreSubMenu("Snow");
+            ExploreSubMenu("Activities");
+            ExploreSubMenu("Food + Drink");
+            ExploreSubMenu("Lodging");
+            ExploreSubMenu("Backcountry Skiing");
+            ExploreSubMenu("Terrain Parks");
+            ExploreSubMenu("Ski Utah Magazine");
+            ExploreSubMenu("eNewsletter & Snowmail");
+            ExploreSubMenu("Compare All Resorts");
+            ExploreSubMenu("Real Estate");
+            ExploreSubMenu("Ski Bus");
+            ExploreSubMenu("Join Ski Utah");
+            ExploreSubMenu("Ski Utah Membership");
+
         }
 
         /*

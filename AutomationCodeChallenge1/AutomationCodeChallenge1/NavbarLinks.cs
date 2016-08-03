@@ -174,7 +174,7 @@ namespace AutomationCodeChallenge1
 
        public void ResortsAndSnowSubMenu(string subNavBarBtn)
        {
-            var action = HoverOverNavBarElement("https://www.skiutah.com", "\"//div[@id=\\\'top_menu\\\']/ul/li[2]/a\"");
+            var action = HoverOverNavBarElement("https://www.skiutah.com", "//div[@id=\'top_menu\']/ul/li[2]/a");
             action.Perform();
 
             
@@ -325,6 +325,238 @@ namespace AutomationCodeChallenge1
             }
 
         }
+
+       public void DealsSubMenu(string subNavBarBtn)
+       {
+
+            var action = HoverOverNavBarElement("https://www.skiutah.com", "//div[@id=\'top_menu\']/ul/li[4]/a");
+            action.Perform();
+
+            if (subNavBarBtn == "All Deals")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'All Deals\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Lodging")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[4]/ul/li/ul/li[3]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Retail & Rental")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Retail & Rental\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Transportation")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[4]/ul/li/ul/li[5]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Learn to Ski Program")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Learn to Ski Program\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Beginner")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Beginner\')]")));
+                action.Click(actionBtn).Perform();
+            }
+        }
+
+       public void PassesSubMenu(string subNavBarBtn)
+       {
+            var action = HoverOverNavBarElement("https://www.skiutah.com", "//div[@id=\'top_menu\']/ul/li[5]/a");
+            action.Perform();
+
+            if (subNavBarBtn == "Purchase Utah Lift Tickets")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Purchase Utah Lift Tickets\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "5th & 6th Grade Passport")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'5th & 6th Grade Passport\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski Utah Yeti Pass")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Ski Utah Yeti Pass\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Buy the Silver and Gold Passes")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Buy the Silver and Gold Passes\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "2016-17 Season Passes")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'2016-17 Season Passes\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Military and Senior Day Ski Pass Prices")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Military and Senior Day Ski Pass Prices\')]")));
+                action.Click(actionBtn).Perform();
+            }
+        }
+
+       public void ExploreSubMenu(string subNavBarBtn)
+       {
+            var action = HoverOverNavBarElement("https://www.skiutah.com", "//div[@id=\'top_menu\']/ul/li[6]/a");
+            action.Perform();
+
+            if (subNavBarBtn == "Stories - Photos - Vidoes")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[2]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Interconnect Adventure Tour")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Interconnect Adventure Tour\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Utah Areas 101")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Utah Areas 101\')]")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Getting To Utah Resorts")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Getting To Utah Resorts\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Snow")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//a[contains(text(),\'Snow\')]")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Activities")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[7]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Food + Drink")
+            {
+                var actionBtn =
+                wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[8]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Lodging")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[9]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Backcountry Skiing")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[10]/a")));
+                action.Click(actionBtn).Perform();
+            }
+            if (subNavBarBtn == "Terrain Parks")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li/ul/li[11]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski Utah Magazine")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[2]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "eNewsletter & Snowmail")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[3]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Compare All Resorts")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[4]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Real Estate")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[5]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski Bus")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[6]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Join Ski Utah")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[7]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+            if (subNavBarBtn == "Ski Utah Membership")
+            {
+                var actionBtn =
+                 wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@id=\'top_menu\']/ul/li[6]/ul/li[2]/ul/li[8]/a")));
+                action.Click(actionBtn).Perform();
+            }
+
+        }
+
+       public static Actions HoverOverNavBarElement(string url, string element)
+       {
+           driver.Navigate().GoToUrl(url);
+            driver.Manage().Window.Maximize();
+
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+
+           var navBarButton = wait.Until(ExpectedConditions.ElementIsVisible(By.XPath(element)));
+            var action = new Actions(driver);
+            action.MoveToElement(navBarButton).Perform();
+           return action;
+       }
     
    }
 
