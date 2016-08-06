@@ -64,6 +64,7 @@
     <Compile Include="AutomationTests.cs" />
     <Compile Include="NavbarLinks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SkiResortTimes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
