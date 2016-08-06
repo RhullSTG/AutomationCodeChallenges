@@ -25,7 +25,7 @@ namespace AutomationCodeChallenge1
         {
             string url = "https://www.skiutah.com";
             string validationString = "Ski Utah";
-
+             
             driver.Navigate().GoToUrl(url);
 
             string actualTitle = driver.Title; //This string is "Ski Utah - Ski Utah." 
@@ -89,7 +89,7 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
 
-            DealsSubMenu("All Deals");
+             DealsSubMenu("All Deals");
             DealsSubMenu("Lodging");
             DealsSubMenu("Retail & Rental");
             DealsSubMenu("Transportation");
@@ -130,7 +130,8 @@ namespace AutomationCodeChallenge1
         [TestMethod]
         public void TestForSkiResort()
         {
-            
+            SkiResortTimes getBeaverMtnTime = new SkiResortTimes();
+            getBeaverMtnTime.GetTimeFromAirport("Beaver Mountain");
         }
 
         /*
