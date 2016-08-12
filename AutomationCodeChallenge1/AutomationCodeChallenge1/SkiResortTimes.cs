@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -18,36 +19,72 @@ namespace AutomationCodeChallenge1
             driver.Navigate().GoToUrl("https://www.skiutah.com/");
             driver.Manage().Window.Maximize();
 
-           WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
+            driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
             if (resortName == "Beaver Mountain")
             {
-                try
-                {
-                    driver.FindElement(By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div")).Click();
 
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(5));
+                driver.FindElement(By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div")).Click();
 
-                    driver.FindElement(By.CssSelector("#ski-utah-welcome-map > div > div.map-Container-menu > div.map-Container-compare.is-expanded > label > span.map-Compare-selected.map-Compare-selected--reset")).Click();
+                Thread.Sleep(10000);
 
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
-                    IWebElement resortDetails =
-                        driver.FindElement(By.XPath("//input[@id=\'map-popover-beaver-mountain\']"));
-                    resortDetails.Click();
+                driver.FindElement(
+                    By.CssSelector(
+                        "#ski-utah-welcome-map > div > div.map-Container-menu > div.map-Container-compare.is-expanded > label > span.map-Compare-selected.map-Compare-selected--reset"))
+                    .Click();
 
-                    driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
-                    var minutesFromAirport = resortDetails.FindElement(By.CssSelector("#ski-utah-welcome-map > div > div.map-Container-content > div.map-Areas > div.map-Area.map-Area--logan > div.map-Popover.map-Popover--beaver-mountain > div.map-Popover-content > p")).Text;
+                IWebElement resortDetails =
+                    driver.FindElement(
+                        By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/label[1]"));
+                resortDetails.Click();
 
-                    Console.WriteLine(minutesFromAirport);
-                
-                }
-                catch (ElementNotVisibleException ex)
-                { 
-                    Console.WriteLine("Could not find element(s)");
-                }
+                driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                var minutesFromAirport =
+                    driver.FindElement(
+                        By.XPath(
+                            "//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[2]/div[2]/p/span[3]"))
+                        .Text;
+
+                Console.WriteLine("Beaver Mountain: " + minutesFromAirport + " Minutes");
             }
+
+            if (resortName == "Cherry Peak")
+                {
+
+                        driver.FindElement(By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div")).Click();
+
+                        Thread.Sleep(10000);
+
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                        driver.FindElement(
+                            By.CssSelector(
+                                "#ski-utah-welcome-map > div > div.map-Container-content > div.map-Areas > div.map-Area.map-Area--logan > label.map-Area-label.js-map-popover-toggle.map-Area-label--cherry"))
+                            .Click();
+
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                        IWebElement resortDetails =
+                            driver.FindElement(
+                                By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[3]/div[2]/p/span[3]"));
+                        resortDetails.Click();
+
+                        driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
+
+                        var minutesFromAirport =
+                            driver.FindElement(
+                                By.XPath(
+                                    "//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[2]/div[2]/p/span[3]"))
+                                .Text;
+
+                        Console.WriteLine("Cherry Peak: " + minutesFromAirport + " Minutes");
+                    }
+                     
         }
     }
 }

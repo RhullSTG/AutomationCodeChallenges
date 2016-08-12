@@ -19,7 +19,7 @@ namespace AutomationCodeChallenge1
 
         /*
          * AUTOMATION CODE CHALLENGE #1
-         */
+         */ 
         [TestMethod]
         public void TestForVerifyWebsite()
         {
@@ -130,8 +130,10 @@ namespace AutomationCodeChallenge1
         [TestMethod]
         public void TestForSkiResort()
         {
-            SkiResortTimes getBeaverMtnTime = new SkiResortTimes();
-            getBeaverMtnTime.GetTimeFromAirport("Beaver Mountain");
+            SkiResortTimes skiResort = new SkiResortTimes();
+            skiResort.GetTimeFromAirport("Beaver Mountain");
+            skiResort.GetTimeFromAirport("Cherry Peak");
+            
         }
 
         /*
