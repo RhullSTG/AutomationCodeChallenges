@@ -71,7 +71,7 @@ namespace AutomationCodeChallenge1
 
                         IWebElement resortDetails =
                             driver.FindElement(
-                                By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[3]/div[2]/p/span[3]"));
+                                By.XPath("//*[@id=\\\"ski-utah-welcome-map\\\"]//p/span[3]"));
                         resortDetails.Click();
 
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
