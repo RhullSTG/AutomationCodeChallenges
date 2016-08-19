@@ -131,6 +131,10 @@ namespace AutomationCodeChallenge1
         public void TestForSkiResort()
         {
             
+            SkiResortTimes skiResortTimes = new SkiResortTimes();
+
+            skiResortTimes.GetTimeFromAirport("Beaver Mountain");
+
         }
 
         /*
