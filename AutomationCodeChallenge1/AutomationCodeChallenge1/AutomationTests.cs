@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium; 
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationCodeChallenge1
+namespace AutomationCodeChallenges
 {
     [TestClass]
     public class AutomationTests : NavbarLinks
@@ -128,7 +128,7 @@ namespace AutomationCodeChallenge1
          */
 
         [TestMethod]
-        public void TestForSkiResort()
+        public void TestForSkiResortTime()
         {
             SkiResortTimes skiResort = new SkiResortTimes();
             skiResort.GetTimeFromAirport("Beaver Mountain");

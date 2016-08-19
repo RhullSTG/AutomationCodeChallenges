@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace AutomationCodeChallenge1
+namespace AutomationCodeChallenges
 {
     class SkiResortTimes
     {
@@ -69,17 +69,20 @@ namespace AutomationCodeChallenge1
 
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
+
                         IWebElement resortDetails =
                             driver.FindElement(
-                                By.XPath("//*[@id=\\\"ski-utah-welcome-map\\\"]//p/span[3]"));
+                                By.XPath("//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/label[2]"));
                         resortDetails.Click();
 
                         driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
-                        var minutesFromAirport =
+                    Thread.Sleep(10000);
+
+                var minutesFromAirport =
                             driver.FindElement(
                                 By.XPath(
-                                    "//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[2]/div[2]/p/span[3]"))
+                                    "//*[@id=\"ski-utah-welcome-map\"]/div/div[4]/div[2]/div[1]/div[3]/div[2]/p/span[3]"))
                                 .Text;
 
                         Console.WriteLine("Cherry Peak: " + minutesFromAirport + " Minutes");

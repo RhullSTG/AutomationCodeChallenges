@@ -1,4 +1,4 @@
-﻿namespace AutomationCodeChallenge1
+﻿namespace AutomationCodeChallenges
 {
     public enum SkiResortEnum
     {
@@ -16,5 +16,5 @@
         Sundance,
         EaglePoint,
         BrianHead
-    };j
+    };
 }

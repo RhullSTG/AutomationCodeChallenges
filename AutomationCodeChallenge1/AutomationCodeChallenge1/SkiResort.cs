@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationCodeChallenge1
+namespace AutomationCodeChallenges
 {
     class SkiResort
     {
@@ -17,16 +17,8 @@ namespace AutomationCodeChallenge1
 
         public void GetTimeFromAirport()
         {
-            SkiResort skiResortName = ;
-            switch ("skiResortName")
-            {
-                case "BeaverMountain":
-                    SkiResortEnum.BeaverMountain.GetHashCode();
-                    break;
-                case "CherryPeak":
-                    SkiResortEnum.CherryPeak.
-
-            }
+            
+            
         }
     }
 }
