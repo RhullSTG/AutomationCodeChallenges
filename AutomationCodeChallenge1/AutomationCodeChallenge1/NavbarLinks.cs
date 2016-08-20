@@ -10,7 +10,7 @@ using OpenQA.Selenium.Remote;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 
-namespace AutomationCodeChallenge1
+namespace AutomationCodeChallenges
 {
    public class NavbarLinks 
    {

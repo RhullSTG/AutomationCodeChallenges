@@ -4,7 +4,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium; 
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationCodeChallenge1
+namespace AutomationCodeChallenges
 {
     [TestClass]
     public class AutomationTests : NavbarLinks
@@ -19,13 +19,13 @@ namespace AutomationCodeChallenge1
 
         /*
          * AUTOMATION CODE CHALLENGE #1
-         */
+         */ 
         [TestMethod]
         public void TestForVerifyWebsite()
         {
             string url = "https://www.skiutah.com";
             string validationString = "Ski Utah";
-
+             
             driver.Navigate().GoToUrl(url);
 
             string actualTitle = driver.Title; //This string is "Ski Utah - Ski Utah." 
@@ -89,7 +89,7 @@ namespace AutomationCodeChallenge1
             ResortsAndSnowSubMenu("Sundance");
             ResortsAndSnowSubMenu("Cross Country - Nordic Locations");
 
-            DealsSubMenu("All Deals");
+             DealsSubMenu("All Deals");
             DealsSubMenu("Lodging");
             DealsSubMenu("Retail & Rental");
             DealsSubMenu("Transportation");
@@ -128,8 +128,11 @@ namespace AutomationCodeChallenge1
          */
 
         [TestMethod]
-        public void TestForSkiResort()
+        public void TestForSkiResortTime()
         {
+            SkiResortTimes skiResort = new SkiResortTimes();
+            skiResort.GetTimeFromAirport("Beaver Mountain");
+            skiResort.GetTimeFromAirport("Cherry Peak");
             
             SkiResortTimes skiResortTimes = new SkiResortTimes();
 
